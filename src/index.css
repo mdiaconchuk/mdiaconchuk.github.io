@@ -18,7 +18,7 @@ body {
     /* =======================
    BACKGROUNDS / SURFACES
    ======================= */
---dark-bg: #121212;                  /* Fondo principal, casi negro */
+--dark-bg: #141414;                  /* Fondo principal, casi negro */
 --dark-surface: #1A1A1A;             /* Superficie normal */
 --dark-surface-container: #232323;   /* Superficie elevada */
 --dark-surface-container-high: #2C2C2C; /* Superficie más elevada, navbar */
@@ -26,7 +26,7 @@ body {
 /* =======================
    TEXTOS
    ======================= */
---dark-text: rgba(255,255,255,0.87);        /* Principal */
+--dark-text: rgba(255, 253, 253, 0.87);        /* Principal */
 --dark-text-secondary: rgba(255,255,255,0.60);
 --dark-text-disabled: rgba(255,255,255,0.38);
 
@@ -61,7 +61,7 @@ body {
 /* =======================
    TEXTOS
    ======================= */
---light-text: rgba(0,0,0,0.95); /* ANTES: rgba(0,0,0,0.87) */             /* Principal (Ahora con más opacidad) */
+--light-text: rgba(34, 34, 34, 0.95); /* ANTES: rgba(0,0,0,0.87) */             /* Principal (Ahora con más opacidad) */
 --light-text-secondary: rgba(0,0,0,0.60);
 --light-text-disabled: rgba(0,0,0,0.38);
 
@@ -88,4 +88,23 @@ body {
 
 .merriweather {
 font-family: "Merriweather";
+}
+
+html {
+   cursor: url('/light/arrow.cur'), auto;
+}
+html.dark {
+   cursor: url('/dark/arrow.cur'), auto;
+}
+.clickable {
+  cursor: url('/light/hand.cur'), pointer;
+}
+html.dark .clickable {
+  cursor: url('/dark/hand.cur'), pointer;
+}
+a, button {
+  cursor: url('/light/hand.cur'), pointer;
+}
+html.dark a, html.dark button {
+  cursor: url('/dark/hand.cur'), pointer;
 }

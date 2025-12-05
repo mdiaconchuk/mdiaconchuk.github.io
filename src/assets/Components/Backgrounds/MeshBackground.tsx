@@ -1,29 +1,30 @@
 import { MeshGradient } from "@mesh-gradient/react";
 import { useTheme } from "../../../context/themeContext";
 import { useMemo } from "react";
+import { motion } from "motion/react";
 
 function MeshBackground() {
   const { theme } = useTheme();
 
   const darkColors = useMemo<[string, string, string, string]>(
-  () => [
-    "#121212", // 0: dark-bg
-    "#1A1A1A", // 1: dark-surface
-    "#1b263b", // 2: dark-tertiary
-    "#415a77", // 3: dark-primary
-  ],
-  []
-);
+    () => [
+      "#121212", 
+      "#1A1A1A", 
+      "#1b263b", 
+      "#415a77", 
+    ],
+    []
+  );
 
-const lightColors = useMemo<[string, string, string, string]>(
-  () => [
-    "#ffffff", // 0: Blanco puro para la luz
-    "#b4c0cc", // 1: light-outline - Para generar una sombra sutil
-    "#6c88a3", // 2: light-secondary - Color intermedio
-    "#39506b"  // 3: light-primary - El color más oscuro para la definición
-  ],
-  []
-);
+  const lightColors = useMemo<[string, string, string, string]>(
+    () => [
+      "#ffffff", 
+      "#b4c0cc", 
+      "#6c88a3", 
+      "#39506b" 
+    ],
+    []
+  );
 
   const options = useMemo(() => {
     return {
@@ -32,17 +33,36 @@ const lightColors = useMemo<[string, string, string, string]>(
       pauseOnOutsideViewport: true,
       seed: 10,
       transition: true,
+      speed: 0,
     };
-  }, [theme]);
+  }, [theme, darkColors, lightColors]);
 
   return (
-    <div className="absolute -z-10 inset-0">
-      <div className="absolute inset-0 pointer-events-none bg-black/40 dark:bg-transparent" />
-      <MeshGradient
-        options={options}
-        style={{ width: "100%", height: "100%" }}
+    <motion.div 
+      className="absolute -z-10 inset-0 bg-[#eff2f6] dark:bg-[#121212] transition-colors duration-500" 
+      initial={{ opacity: 0 }} 
+      animate={{ opacity: 1 }} 
+      transition={{ duration: 1 }}
+    >
+      
+      <div className="absolute inset-0 w-full h-full">
+          <MeshGradient
+            options={options}
+            style={{ width: "100%", height: "100%" }}
+          />
+      </div>
+
+
+      <motion.div 
+        className="absolute inset-0 pointer-events-none"
+        initial={false}
+        animate={{
+            backgroundColor: theme === "dark" ? "rgba(0,0,0,0)" : "rgba(0,0,0,0.4)"
+        }}
+        transition={{ duration: 0.5, ease: "easeInOut" }}
       />
-    </div>
+      
+    </motion.div>
   );
 }
 

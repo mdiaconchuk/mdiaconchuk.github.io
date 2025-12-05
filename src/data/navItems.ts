@@ -7,6 +7,7 @@ export interface navItemType {
     value: string;
 }
 export interface navIconType {
+    label: string;
     icon: ComponentType<{size?: number, className?: string}>;
     color: string,
     path: string,
@@ -19,7 +20,7 @@ export const navItems: navItemType[] = [
     { label: "Contact", type: "section", value: "/"  },
 ];
 export const navIcons: navIconType[] = [
-    { icon: LinkedinIcon, color: "text-blue-400", path: "https://www.linkedin.com/in/diaconchukm/" },
-    { icon: Mail, color: "text-red-400", path: "mailto:mdiaconchuk@gmail.com" },
-    { icon: Github, color: "text-gray-500", path: "https://github.com/mdiaconchuk" },
+    { label: "Linkedin", icon: LinkedinIcon, color: "text-blue-400", path: "https://www.linkedin.com/in/diaconchukm/" },
+    { label: "Mail", icon: Mail, color: "text-red-400", path: "mailto:mdiaconchuk@gmail.com" },
+    { label: "Github", icon: Github, color: "text-gray-500", path: "https://github.com/mdiaconchuk" },
 ];

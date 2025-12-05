@@ -92,7 +92,7 @@ function PCNavbar() {
                 <Icon
                   key={i}
                   size={25}
-                  className={`text-(--dark-text-secondary) hover:${color} transition duration-200 cursor-pointer`}
+                  className={`text-(--dark-text-secondary) hover:${color} transition duration-200`}
                 />
               </a>
             ))}
