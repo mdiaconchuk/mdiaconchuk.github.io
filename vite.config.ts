@@ -5,6 +5,7 @@ export default defineConfig({
   plugins: [
     tailwindcss(),
   ],
+  base: "mdiaconchuk.github.io",
 
   server: {
     port: 5173,
