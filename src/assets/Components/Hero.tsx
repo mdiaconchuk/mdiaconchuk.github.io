@@ -3,7 +3,7 @@ import MeshBackground from './Backgrounds/MeshBackground'
 
 function Hero() {
   return (
-    <div className="relative w-full lg:h-130 2xl:h-220 h-190 flex flex-col items-center justify-center overflow-hidden">
+    <div className="relative w-full xl:h-140 2xl:h-220 h-190 flex flex-col items-center justify-center overflow-hidden">
       <MeshBackground />
 
       <div className="relative text-center flex flex-col mx-0">
@@ -16,7 +16,8 @@ function Hero() {
               duration: 0.8,
             }}
           >
-            <span className="font-normal text-(--light-secondary) dark:text-(--dark-secondary)">Hi!</span> I'm
+            <span className="font-normal text-(--light-secondary) dark:text-(--dark-secondary)">
+              Hello!</span> I'm
           </motion.p>
 
           <motion.p
@@ -32,7 +33,7 @@ function Hero() {
         </div>
 
         <motion.p
-          className="2xl:text-2xl md:text-lg text-xl text-(--dark-text-secondary) 2xl:mx-120 xl:mx-80 lg:mx-80 mx-8 xl:mt-15 mt-10"
+          className="2xl:text-2xl md:text-lg text-xl text-(--dark-text-secondary) 2xl:mx-120 xl:mx-80 mx-8 2xl:mt-15 xl:mt-5 mt-10"
           initial={{ y: 20, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
           transition={{

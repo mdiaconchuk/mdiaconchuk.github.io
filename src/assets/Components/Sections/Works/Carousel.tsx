@@ -51,18 +51,20 @@ export default function Carousel() {
   return (
     <>
       {/* ---------------- CONTENEDOR ---------------- */}
+      <div className="overflow-hidden">
       <div
         className="
           2xl:w-full w-10/12 relative mx-auto
-          h-64 2xl:h-100 xl:h-128
-          2xl:max-w-3xl
+          h-64 2xl:h-100 xl:h-90
+          2xl:max-w-3xl xl:max-w-2xl
         "
       >
         <Spotlight
           color="#778da9"
-          size={400} 
-          opacity={0.4} 
+          size={400}
+          opacity={0.4}
         />
+        {/* ---------------- CARDS ---------------- */}
         {projects.map((project, i) => {
           const offset = getOffset(i);
 
@@ -86,11 +88,10 @@ export default function Carousel() {
                 <div
                   className={`absolute inset-0 flex flex-col justify-end p-4 sm:p-6
                   text-(--dark-text) font-bold duration-500 transition clickable
-                  ${
-                    i === indexSelected
+                  ${i === indexSelected
                       ? "bg-black/40 backdrop-blur-[2px]"
                       : "bg-none"
-                  }`}
+                    }`}
                 >
                   <p className="text-xl sm:text-2xl md:text-3xl mb-1 underline">
                     {project.title}
@@ -132,6 +133,7 @@ export default function Carousel() {
             size={isMobile ? 22 : 28}
           />
         </button>
+      </div>
       </div>
     </>
   );
