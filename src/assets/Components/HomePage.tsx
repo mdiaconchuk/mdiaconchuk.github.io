@@ -1,6 +1,6 @@
 import Hero from "./Hero";
 import About from "./Sections/About";
-import WorkSection from "./Sections/Works/WorkSection";
+import WorkSection from "./Sections/WorksSections/WorkSection";
 
 function HomePage() {
   return (

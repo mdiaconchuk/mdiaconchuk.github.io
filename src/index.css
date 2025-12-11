@@ -15,96 +15,123 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 
-    /* =======================
+  /* =======================
    BACKGROUNDS / SURFACES
    ======================= */
---dark-bg: #141414;                  /* Fondo principal, casi negro */
---dark-surface: #1A1A1A;             /* Superficie normal */
---dark-surface-container: #232323;   /* Superficie elevada */
---dark-surface-container-high: #2C2C2C; /* Superficie más elevada, navbar */
+  --dark-bg: #141414; /* Fondo principal, casi negro */
+  --dark-surface: #1a1a1a; /* Superficie normal */
+  --dark-surface-container: #232323; /* Superficie elevada */
+  --dark-surface-container-high: #2c2c2c; /* Superficie más elevada, navbar */
 
-/* =======================
+  /* =======================
    TEXTOS
    ======================= */
---dark-text: rgba(255, 253, 253, 0.87);        /* Principal */
---dark-text-secondary: rgba(255,255,255,0.60);
---dark-text-disabled: rgba(255,255,255,0.38);
+  --dark-text: rgba(255, 253, 253, 0.87); /* Principal */
+  --dark-text-secondary: rgba(255, 255, 255, 0.6);
+  --dark-text-disabled: rgba(255, 255, 255, 0.38);
 
-/* =======================
+  /* =======================
    COLORES PRINCIPALES / ACCENT
    ======================= */
---dark-primary: #415a77;             /* Principal */
---dark-on-primary: #e0e1dd;
+  --dark-primary: #415a77; /* Principal */
+  --dark-on-primary: #e0e1dd;
 
---dark-secondary: #778da9;           /* Secundario */
---dark-on-secondary: #0d1b2a;
+  --dark-secondary: #778da9; /* Secundario */
+  --dark-on-secondary: #0d1b2a;
 
---dark-tertiary: #1b263b;            /* Terciario */
---dark-on-tertiary: #e0e1dd;
+  --dark-tertiary: #1b263b; /* Terciario */
+  --dark-on-tertiary: #e0e1dd;
 
---dark-accent: #6fc2b0;              /* Accent / botones / highlights */
+  --dark-accent: #6fc2b0; /* Accent / botones / highlights */
 
-/* =======================
+  /* =======================
    OUTLINE / ERROR
    ======================= */
---dark-outline: #415a77;
---dark-danger: #efb8c8;
+  --dark-outline: #415a77;
+  --dark-danger: #efb8c8;
 
-/* =======================
+  /* =======================
    BACKGROUNDS / SURFACES
    ======================= */
---light-bg: #eff2f6; /* ANTES: #f5f7fa */                        /* Fondo principal, un toque más oscuro */
---light-surface: #ffffff;                   /* Superficie normal */
---light-surface-container: #e9edf2;         /* Superficie elevada */
---light-surface-container-high: #dce2e8;    /* Navbar o contenedor alto */
+  --light-bg: #eff2f6; /* ANTES: #f5f7fa */ /* Fondo principal, un toque más oscuro */
+  --light-surface: #ffffff; /* Superficie normal */
+  --light-surface-container: #e9edf2; /* Superficie elevada */
+  --light-surface-container-high: #dce2e8; /* Navbar o contenedor alto */
 
-/* =======================
+  /* =======================
    TEXTOS
    ======================= */
---light-text: rgba(34, 34, 34, 0.95); /* ANTES: rgba(0,0,0,0.87) */             /* Principal (Ahora con más opacidad) */
---light-text-secondary: rgba(0,0,0,0.60);
---light-text-disabled: rgba(0,0,0,0.38);
+  --light-text: rgba(
+    34,
+    34,
+    34,
+    0.95
+  ); /* ANTES: rgba(0,0,0,0.87) */ /* Principal (Ahora con más opacidad) */
+  --light-text-secondary: rgba(0, 0, 0, 0.6);
+  --light-text-disabled: rgba(0, 0, 0, 0.38);
 
-/* =======================
+  /* =======================
    COLORES PRINCIPALES / ACCENT
    ======================= */
---light-primary: #39506b;                   /* Equivalente del #415a77 pero más claro */
---light-on-primary: #ffffff;
+  --light-primary: #39506b; /* Equivalente del #415a77 pero más claro */
+  --light-on-primary: #ffffff;
 
---light-secondary: #6c88a3;                 /* Equivalente al #778da9 suavizado */
---light-on-secondary: #0d1b2a;
+  --light-secondary: #6c88a3; /* Equivalente al #778da9 suavizado */
+  --light-on-secondary: #0d1b2a;
 
---light-tertiary: #a9b8c8;                  /* Versión clara del terciario */
---light-on-tertiary: #1b263b;
+  --light-tertiary: #a9b8c8; /* Versión clara del terciario */
+  --light-on-tertiary: #1b263b;
 
---light-accent: #53a898;                    /* Equivalente del #6fc2b0 pero sin saturación */
+  --light-accent: #53a898; /* Equivalente del #6fc2b0 pero sin saturación */
 
-/* =======================
+  /* =======================
    OUTLINE / ERROR
    ======================= */
---light-outline: #b4c0cc;
---light-danger: #c94761;     
+  --light-outline: #b4c0cc;
+  --light-danger: #c94761;
 }
 
 .merriweather {
-font-family: "Merriweather";
+  font-family: "Merriweather";
 }
 
 html {
-   cursor: url('/light/arrow.cur'), auto;
+  cursor: url("/light/arrow.cur"), auto;
 }
 html.dark {
-   cursor: url('/dark/arrow.cur'), auto;
+  cursor: url("/dark/arrow.cur"), auto;
 }
 .clickable {
-  cursor: url('/light/hand.cur'), pointer;
+  cursor: url("/light/hand.cur"), pointer;
 }
 html.dark .clickable {
-  cursor: url('/dark/hand.cur'), pointer;
+  cursor: url("/dark/hand.cur"), pointer;
 }
-a, button {
-  cursor: url('/light/hand.cur'), pointer;
+a,
+button {
+  cursor: url("/light/hand.cur"), pointer;
 }
-html.dark a, html.dark button {
-  cursor: url('/dark/hand.cur'), pointer;
+html.dark a,
+html.dark button {
+  cursor: url("/dark/hand.cur"), pointer;
+}
+
+.roundedPill {
+  @apply z-10 px-6 py-3 rounded-full bg-(--light-accent) dark:bg-(--dark-accent) absolute flex items-center justify-center shadow-lg 
+text-(--light-text-secondary) border border-(--light-outline) dark:border-(--dark-outline);
+}
+
+@keyframes appearY {
+  0% {
+    opacity: 0;
+    transform: translateY(60px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.appearY {
+  animation: appearY 0.5s ease-out forwards;
 }
