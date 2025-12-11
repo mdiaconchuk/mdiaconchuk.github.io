@@ -4,8 +4,7 @@ This is my personal portfolio built with **React**, **Vite**, **TypeScript**, an
 Here I showcase my projects, skills, and work as a frontend developer.
 
 ## Tech Stack
-- Next.js 14
-- React
+- React 19.2.2
 - TypeScript
 - TailwindCSS
 - Framer Motion
@@ -14,7 +13,4 @@ Here I showcase my projects, skills, and work as a frontend developer.
 ```bash
 npm install
 npm run dev
-
-  },
-])
 ```
