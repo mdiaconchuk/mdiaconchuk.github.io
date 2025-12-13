@@ -4,11 +4,13 @@ import "./index.css";
 import App from "./App.tsx";
 import { HashRouter } from "react-router-dom";
 import { ThemeProvider } from "./context/themeContext.tsx";
+import ScrollToTop from "./assets/Components/ScrollToTop.tsx";
 
 createRoot(document.getElementById("root")!).render(
   <StrictMode>
     <ThemeProvider>
       <HashRouter>
+        <ScrollToTop />
         <App />
       </HashRouter>
     </ThemeProvider>

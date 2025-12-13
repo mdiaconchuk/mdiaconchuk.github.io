@@ -4,9 +4,11 @@ import LogoSVG from "../../LogoSVG";
 import { motion } from "motion/react";
 import { useTheme } from "../../../../context/themeContext";
 import { Sun, Moon } from "lucide-react";
+import useScrollInto from "../../../../hooks/useScrollInto";
 
 function PCNavbar() {
   const { theme, setTheme } = useTheme();
+  const scrollInto = useScrollInto();
   return (
     <>
       <nav
@@ -32,7 +34,7 @@ function PCNavbar() {
                 return (
                   <button
                     key={i}
-                    onClick={() => alert("lmao")}
+                    onClick={() => scrollInto(item.value)}
                     className={commonClasses}
                   >
                     {item.label}
@@ -66,7 +68,7 @@ function PCNavbar() {
         <div className="xl:flex gap-x-7 mr-4 hidden">
             <button
               onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
-              className={`w-14 h-8 rounded-full flex items-center transition-transform px-1 dark:bg-(--dark-surface-container) cursor-pointer
+              className={`w-14 h-8 rounded-full flex items-center transition-transform px-1 dark:bg-(--dark-surface-container)
                bg-(--light-surface-container-high) hover:scale-105`}
             >
               <motion.div

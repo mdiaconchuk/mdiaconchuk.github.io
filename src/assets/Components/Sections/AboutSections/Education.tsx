@@ -15,7 +15,7 @@ function Education() {
   return (
     <div>
       {/* TÍTULO */}
-      <p className="text-4xl merriweather mt-15 text-center font-bold mb-5">
+      <p className="text-4xl merriweather mt-15 text-center font-bold mb-5 text-(--light-primary) dark:(--dark-primary)">
         Education
       </p>
 

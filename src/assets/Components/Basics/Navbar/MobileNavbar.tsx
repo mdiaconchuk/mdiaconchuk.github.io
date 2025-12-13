@@ -70,7 +70,7 @@ function MobileNavbar() {
             {navItems.map((item, i) => {
               if (item.type === "section") {
                 return (
-                  <button key={i} onClick={() => alert("lmao")}>
+                  <button key={i} onClick={() => {alert("lmao"); setIsOpen(false)}}>
                     {item.label}
                   </button>
                 );

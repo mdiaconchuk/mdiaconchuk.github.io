@@ -2,7 +2,7 @@ import { ChevronRight } from "lucide-react";
 import { motion, useInView } from "motion/react";
 import { useRef } from "react";
 import { Link } from "react-router-dom";
-import Spotlight from "../Spotlight";
+import Spotlight from "../../Spotlight";
 
 const hiddenBgState = {
   x: "-100%",
@@ -15,7 +15,7 @@ const visibleBgState = {
   borderBottomRightRadius: 0,
 };
 
-function About() {
+function CheckWorks() {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, amount: 0.3 });
 
@@ -60,7 +60,7 @@ function About() {
             Discover
           </span>
 
-          <Link to="/about">
+          <Link to="/">
             <motion.div
               className="flex flex-row items-center cursor-pointer relative group"
               whileHover="hover"
@@ -69,7 +69,7 @@ function About() {
             >
               <div className="relative flex flex-col">
                 <p className="xl:text-5xl text-4xl merriweather font-bold text-(--light-primary) dark:text-(--dark-primary)">
-                  About Me
+                  My works
                 </p>
 
                 {/* UNDERLINE */}
@@ -102,5 +102,4 @@ function About() {
   );
 }
 
-export default About;
-
+export default CheckWorks;

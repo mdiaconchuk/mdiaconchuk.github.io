@@ -15,9 +15,9 @@ export interface navIconType {
 
 export const navItems: navItemType[] = [
     { label: "Home", type: "route", value: "/"  },
-    { label: "Works", type: "section", value: "/"  },
+    { label: "Works", type: "section", value: "myWorks"  },
     { label: "About", type: "route", value: "/about"  },
-    { label: "Contact", type: "section", value: "/"  },
+    { label: "Contact", type: "section", value: "contact"  },
 ];
 export const navIcons: navIconType[] = [
     { label: "Linkedin", icon: LinkedinIcon, color: "text-blue-400", path: "https://www.linkedin.com/in/diaconchukm/" },

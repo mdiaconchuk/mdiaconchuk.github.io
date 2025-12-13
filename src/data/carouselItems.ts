@@ -6,13 +6,7 @@ export interface ProjectType {
     description: string;
 }
 
-export const projects: ProjectType[] = [{
-    id: 1,
-    title: "Sample text",
-    img: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=2426&auto=format&fit=crop",
-    path: "/",
-    description: "A placeholder card"
-  },
+export const projects: ProjectType[] = [
   {
     id: 2,
     title: "Parkly",

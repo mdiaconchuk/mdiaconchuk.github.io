@@ -2,7 +2,8 @@ import { socialNetworks } from "../../../data/socialNetworks";
 
 function Contact() {
   return (
-    <div className="w-full py-16 bg-(--light-primary) dark:bg-(--dark-primary) text-(--light-on-primary) dark:text-(--dark-on-primary) relative">
+    <div className="w-full py-16 bg-(--light-primary) dark:bg-(--dark-primary) text-(--light-on-primary) dark:text-(--dark-on-primary) relative"
+    id="contact">
       <div className="max-w-4xl mx-auto 2xl:flex 2xl:gap-x-30 2xl:text-left text-center">
         {/* GET IN TOUCH + DESC */}
         <div>

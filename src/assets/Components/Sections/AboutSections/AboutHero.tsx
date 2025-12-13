@@ -55,6 +55,7 @@ function AboutHero() {
   border-(--light-tertiary) dark:border-(--dark-secondary) overflow-hidden transition"
             href="src/assets/Assets/Matias Diaconchuk - CV.pdf"
             download
+            id="resumeButton"
           >
             <span className="relative z-10 text-(--dark-text)">Get Resume</span>
             <span
@@ -62,16 +63,6 @@ function AboutHero() {
     transition-all duration-300 ease-out group-hover:w-full"
             />
           </a>
-          {/* CV BOTÓN ESPAÑOL */}
-          {/* <a
-            href="src/assets/Assets/Matias Diaconchuk - CV.pdf"
-            download
-            className="mx-auto xl:mx-0"
-          >
-            <span className="text-(--dark-text-secondary) text-sm underline merriweather">
-              Spanish resume
-            </span>
-          </a> */}
         </div>
       </div>
     </div>
