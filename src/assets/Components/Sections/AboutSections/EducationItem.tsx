@@ -20,7 +20,7 @@ const lineVariants = {
 
 function EducationItem({ item, isLast }: EducationItemProps) {
   return (
-    <div className="flex 2xl:gap-4 gap-2 2xl:w-6/12 w-10/12 mx-auto">
+    <div className="flex 2xl:gap-4 gap-2 xl:w-6/12 w-10/12 mx-auto">
       {/* Icono + linea */}
       <motion.div className="flex flex-col items-center">
         <div className="z-10 bg-background py-1">

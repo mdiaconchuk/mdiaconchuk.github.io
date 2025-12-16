@@ -5,18 +5,27 @@ import { Moon, Sun, Menu, X } from "lucide-react";
 import { useTheme } from "../../../../context/themeContext";
 import { motion } from "motion/react";
 import LogoSVG from "../../LogoSVG";
+import useWorkNavigation from "../../../../hooks/useWorkNavigation";
 
-function MobileNavbar() {
+interface MobileNavbarProps {
+  isScrolled: boolean
+}
+
+function MobileNavbar({isScrolled}: MobileNavbarProps) {
   const { theme, setTheme } = useTheme();
   const [isOpen, setIsOpen] = useState<boolean>(false);
+  const handleWorkNav = useWorkNavigation();
 
   return (
     <>
       {/* ------------- MOBILE NAVBAR ------------- */}
-      <nav className="xl:hidden absolute top-0 z-50 w-full text-(--dark-text)">
+      <nav className={`xl:hidden fixed z-50 w-full text-(--dark-text) transition duration-300 ease-in-out
+         ${isScrolled ? "bg-black/50 backdrop-blur-2xl" : ""}`}>
         {/* ------------- MOBILE Head icons ------------- */}
         <div className="flex w-full h-15 justify-between p-8 relative items-center z-20">
+          <Link to="/">
           <LogoSVG className="size-12 text-(--dark-text)" />
+          </Link>
 
           <div className="flex items-center">
              <div className="mx-5">
@@ -62,24 +71,26 @@ function MobileNavbar() {
 
         {/* ------------- MOBILE Menu ------------- */}
         <div
-          className={`pt-20 pb-10 z-10 absolute top-0 w-full bg-black/20 backdrop-blur-xl transition font-bold ${
-            isOpen ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none"
+          className={`pt-20 pb-10 absolute top-0 w-full transition font-bold  ${
+            isOpen ? "opacity-100 pointer-events-auto backdrop-blur-2xl" : "opacity-0 pointer-events-none"
           }`}
         >
            <div className="flex flex-col justify-center items-center *:text-2xl gap-y-3">
             {navItems.map((item, i) => {
               if (item.type === "section") {
                 return (
-                  <button key={i} onClick={() => {alert("lmao"); setIsOpen(false)}}>
+                  <button key={i} onClick={() => {handleWorkNav(item.value, item.label); setIsOpen(false)}}>
                     {item.label}
                   </button>
                 );
               }
               if (item.type === "route") {
                 return (
+                  <button onClick={() => setIsOpen(false)}>
                   <Link key={i} to={item.value}>
                     {item.label}
                   </Link>
+                  </button>
                 );
               }
             })}

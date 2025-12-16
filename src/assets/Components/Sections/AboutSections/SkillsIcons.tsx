@@ -1,5 +1,4 @@
 import { skillsData } from "../../../../data/SkillItems";
-import { motion } from "motion/react";
 
 function SkillsIcons() {
   const data = skillsData;

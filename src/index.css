@@ -142,7 +142,7 @@ text-(--dark-text-secondary) dark:text-(--light-text-secondary) border border-(-
 }
 
 .slideX {
-  animation: slideX 30s linear infinite;
+  animation: slideX 32s linear infinite;
 }
 
 .skillItem {

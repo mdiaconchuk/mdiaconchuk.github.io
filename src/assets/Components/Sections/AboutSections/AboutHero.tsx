@@ -2,7 +2,7 @@ import MeshBackground from "../../Backgrounds/MeshBackground";
 
 function AboutHero() {
   return (
-    <div className="relative w-full flex justify-center 2xl:pt-40 pt-15 pb-20">
+    <div className="relative w-full flex justify-center xl:pt-40 pt-15 pb-20">
       <MeshBackground />
 
       {/* CONTENEDOR GENERAL */}
@@ -11,7 +11,7 @@ function AboutHero() {
        dark:text-(--dark-on-primary) appearY"
       >
         {/* FOTO + DECORACIÓN */}
-        <div className="relative xl:w-80 2xl:h-105 w-60 h-80 my-5 xl:my-0 merriweather">
+        <div className="relative xl:w-80 xl:h-105 w-60 h-80 my-5 xl:my-0 merriweather">
           {/* REDONDEADOS */}
           <div className="roundedPill top-12/12 -left-2/12 xl:top-8/12 xl:-left-1/4">
             <p>
@@ -53,7 +53,7 @@ function AboutHero() {
           <a
             className="group relative mt-5 2xl:w-6/12 w-8/12 mx-auto xl:mx-0 rounded-full border py-3 text-center merriweather
   border-(--light-tertiary) dark:border-(--dark-secondary) overflow-hidden transition"
-            href="src/assets/Assets/Matias Diaconchuk - CV.pdf"
+            href="src/assets/Assets/Matias Diaconchuk - CV (Eng).pdf"
             download
             id="resumeButton"
           >
@@ -63,6 +63,11 @@ function AboutHero() {
     transition-all duration-300 ease-out group-hover:w-full"
             />
           </a>
+          {/* CV BOTÓN ESPAÑOL */}
+          <a className="opacity-90 underline merriweather text-sm" href="src/assets/Assets/Matias Diaconchuk - CV.pdf" download>
+          Spanish resume
+          </a>
+
         </div>
       </div>
     </div>

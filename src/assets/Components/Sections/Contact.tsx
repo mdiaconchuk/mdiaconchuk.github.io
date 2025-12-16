@@ -2,13 +2,13 @@ import { socialNetworks } from "../../../data/socialNetworks";
 
 function Contact() {
   return (
-    <div className="w-full py-16 bg-(--light-primary) dark:bg-(--dark-primary) text-(--light-on-primary) dark:text-(--dark-on-primary) relative"
+    <div className="w-full py-10 bg-(--light-primary) dark:bg-(--dark-primary) text-(--light-on-primary) dark:text-(--dark-on-primary) relative"
     id="contact">
       <div className="max-w-4xl mx-auto 2xl:flex 2xl:gap-x-30 2xl:text-left text-center">
         {/* GET IN TOUCH + DESC */}
         <div>
           <p className="text-4xl font-bold merriweather text-(--light-accent) dark:text-(--dark-accent)">Get in touch.</p>
-          <p className="text-2xl mt-4 opacity-80">
+          <p className="text-2xl mt-4 xl:mb-2 mb-0 opacity-80">
             Ready to make amazing websites together?
           </p>
         </div>
