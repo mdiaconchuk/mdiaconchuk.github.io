@@ -1,5 +1,7 @@
 import MeshBackground from "../../Backgrounds/MeshBackground";
 import aboutImage from '/src/assets/Assets/aboutImage.png'
+import CVen from 'src/assets/Assets/Matias Diaconchuk - CV (Eng).pdf'
+import CVes from 'src/assets/Assets/Matias Diaconchuk - CV.pdf'
 
 function AboutHero() {
   return (
@@ -54,7 +56,7 @@ function AboutHero() {
           <a
             className="group relative mt-5 2xl:w-6/12 w-8/12 mx-auto xl:mx-0 rounded-full border py-3 text-center merriweather
   border-(--light-tertiary) dark:border-(--dark-secondary) overflow-hidden transition"
-            href="src/assets/Assets/Matias Diaconchuk - CV (Eng).pdf"
+            href={CVen}
             download
             id="resumeButton"
           >
@@ -67,7 +69,7 @@ function AboutHero() {
           {/* CV BOTÓN ESPAÑOL */}
           <a
             className="opacity-90 underline merriweather text-sm"
-            href="src/assets/Assets/Matias Diaconchuk - CV.pdf"
+            href={CVes}
             download
           >
             Spanish resume
