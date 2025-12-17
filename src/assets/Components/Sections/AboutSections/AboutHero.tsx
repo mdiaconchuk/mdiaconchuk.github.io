@@ -12,7 +12,7 @@ function AboutHero() {
        dark:text-(--dark-on-primary) appearY"
       >
         {/* FOTO + DECORACIÓN */}
-        <div className="relative xl:w-80 xl:h-105 w-60 h-80 my-5 xl:my-0 merriweather">
+        <div className="relative 2xl:w-80 2xl:h-105 w-60 h-80 my-5 xl:my-0 xl:h-80 merriweather">
           {/* REDONDEADOS */}
           <div className="roundedPill top-12/12 -left-2/12 xl:top-8/12 xl:-left-1/4">
             <p>
