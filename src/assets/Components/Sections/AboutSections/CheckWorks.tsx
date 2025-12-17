@@ -1,7 +1,7 @@
 import { ChevronRight } from "lucide-react";
 import { motion, useInView } from "motion/react";
 import { useRef } from "react";
-import { Link } from "react-router-dom";
+import useWorkNavigation from "../../../../hooks/useWorkNavigation";
 import Spotlight from "../../Spotlight";
 
 const hiddenBgState = {
@@ -18,6 +18,7 @@ const visibleBgState = {
 function CheckWorks() {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, amount: 0.3 });
+  const handleWorkNav = useWorkNavigation();
 
   return (
     <div
@@ -55,12 +56,11 @@ function CheckWorks() {
           damping: 20,
         }}
       >
-        <div className="flex flex-col items-center">
-          <span className="text-md font-light uppercase tracking-widest opacity-70 mb-2">
-            Discover
-          </span>
+          <div className="flex flex-col items-center">
+            <span className="text-md font-light uppercase tracking-widest opacity-70 mb-2">
+              Discover
+            </span>
 
-          <Link to="/">
             <motion.div
               className="flex flex-row items-center cursor-pointer relative group"
               whileHover="hover"
@@ -68,13 +68,14 @@ function CheckWorks() {
               animate="rest"
             >
               <div className="relative flex flex-col">
-                <p className="xl:text-5xl text-4xl merriweather font-bold text-(--light-primary) dark:text-(--dark-primary)">
+                <button className="xl:text-5xl text-4xl merriweather font-bold text-(--light-primary) dark:text-(--dark-primary)"
+                onClick={() => handleWorkNav('myWorks', 'Works')}>
                   My works
-                </p>
+                </button>
 
                 {/* UNDERLINE */}
                 <motion.span
-                  className="h-[3px] w-full bg-(--light-secondary) dark:bg-(--dark-secondary) rounded-full absolute -bottom-2 left-0 origin-left"
+                  className="h-0.75 w-full bg-(--light-secondary) dark:bg-(--dark-secondary) rounded-full absolute -bottom-2 left-0 origin-left"
                   variants={{
                     rest: { scaleX: 0 },
                     hover: { scaleX: 1 },
@@ -95,8 +96,7 @@ function CheckWorks() {
                 <ChevronRight size={40} strokeWidth={1.5} />
               </motion.div>
             </motion.div>
-          </Link>
-        </div>
+          </div>
       </motion.div>
     </div>
   );

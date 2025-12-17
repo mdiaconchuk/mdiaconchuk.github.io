@@ -1,4 +1,5 @@
 import MeshBackground from "../../Backgrounds/MeshBackground";
+import aboutImage from '/src/assets/Assets/aboutImage.png'
 
 function AboutHero() {
   return (
@@ -29,7 +30,7 @@ function AboutHero() {
 
           {/* FOTO */}
           <img
-            src="src/assets/Assets/aboutImage.png"
+            src={aboutImage}
             alt="Image of me!"
             className="size-full object-cover border border-(--light-outline) dark:border-(--dark-outline)
                        rounded-xl shadow-2xl"
@@ -64,10 +65,13 @@ function AboutHero() {
             />
           </a>
           {/* CV BOTÓN ESPAÑOL */}
-          <a className="opacity-90 underline merriweather text-sm" href="src/assets/Assets/Matias Diaconchuk - CV.pdf" download>
-          Spanish resume
+          <a
+            className="opacity-90 underline merriweather text-sm"
+            href="src/assets/Assets/Matias Diaconchuk - CV.pdf"
+            download
+          >
+            Spanish resume
           </a>
-
         </div>
       </div>
     </div>
