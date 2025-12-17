@@ -2,8 +2,8 @@ import MeshBackground from "../../Backgrounds/MeshBackground";
 import aboutImage from '/src/assets/Assets/aboutImage.png'
 
 function AboutHero() {
-  const CVen = "public/Matias Diaconchuk - CV (Eng).pdf"
-  const CVes = "public/Matias Diaconchuk - CV.pdf"
+  const CVen = "/Matias Diaconchuk - CV (Eng).pdf"
+  const CVes = "/Matias Diaconchuk - CV.pdf"
   return (
     <div className="relative w-full flex justify-center xl:pt-40 pt-15 pb-20">
       <MeshBackground />
