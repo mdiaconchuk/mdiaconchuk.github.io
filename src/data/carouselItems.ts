@@ -28,4 +28,11 @@ export const projects: ProjectType[] = [
     path: "https://mini-wmp.vercel.app/",
     description: "A Vanilla simple WMP made with TypeScript, HTML and CSS.",
   },
+  {
+    id: 5,
+    title: "Roomie Chat",
+    img: "/roomie.png",
+    path: "https://mini-wmp.vercel.app/",
+    description: "Simple full-stack chat app made with Express and Postgres.",
+  },
 ];
