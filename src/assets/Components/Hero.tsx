@@ -41,7 +41,7 @@ function Hero() {
             delay: 0.3,
           }}
         >
-          A Front-End Developer crafting modern, interactive, and enjoyable web
+          A Web Developer crafting modern, interactive, and enjoyable web
           experiences that people actually love to use.
         </motion.p>
       </div>

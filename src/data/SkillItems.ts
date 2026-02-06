@@ -5,9 +5,12 @@ import {
   LiaJsSquare,
   LiaGithub,
   LiaReact,
+  LiaNodeJs,
 } from "react-icons/lia";
 import { RiTailwindCssLine, RiNextjsLine } from "react-icons/ri";
 import { TbBrandTypescript } from "react-icons/tb";
+import { BiLogoPostgresql } from "react-icons/bi";
+import { SiExpress } from "react-icons/si";
 
 export interface Skill {
   id: number;
@@ -63,6 +66,24 @@ export const skillsData: Skill[] = [
     id: 8,
     name: "GitHub",
     Icon: LiaGithub,
+    colorClass: "text-gray-900 dark:text-white",
+  },
+  {
+    id: 9,
+    name: "Node.js",
+    Icon: LiaNodeJs,
+    colorClass: "text-gray-900 dark:text-white",
+  },
+  {
+    id: 10,
+    name: "Express.js",
+    Icon: SiExpress,
+    colorClass: "text-gray-900 dark:text-white",
+  },
+  {
+    id: 11,
+    name: "PostgreSQL",
+    Icon: BiLogoPostgresql,
     colorClass: "text-gray-900 dark:text-white",
   },
 ];

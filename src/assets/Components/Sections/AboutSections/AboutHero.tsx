@@ -46,8 +46,8 @@ function AboutHero() {
           </p>
 
           <p className="text-xl opacity-80 text-(--dark-on-primary)">
-            I'm a front-end developer and an IT Analyst student. I enjoy
-            building clean, smooth, good-looking interfaces. I like solving
+            I'm a web developer and an IT Analyst student. I enjoy
+            building clean, smooth, good-looking websites. I like solving
             problems, trying new ideas and creating things that feel simple and
             nice to use.
           </p>
