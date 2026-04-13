@@ -32,7 +32,7 @@ export const projects: ProjectType[] = [
     id: 5,
     title: "Roomie Chat",
     img: "/roomie.png",
-    path: "https://mini-wmp.vercel.app/",
+    path: "https://roomie-front.vercel.app",
     description: "Simple full-stack chat app made with Express and Postgres.",
   },
 ];
